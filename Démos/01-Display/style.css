@@ -1,0 +1,19 @@
+.displayblock{
+    width:200px;
+    height:200px;
+    background-color:red;
+    border: 2px black solid;
+}
+.displayinline{
+    background-color:blue;
+    border: 2px black solid;
+    display: inline;
+    color:white;
+}
+.displayinline-block{
+    width:200px;
+    height:200px;
+    background-color:violet;
+    border: 2px black solid;
+    display: inline-block;
+}

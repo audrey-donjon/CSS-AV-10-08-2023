@@ -1,0 +1,54 @@
+/*Décors et fonts à ne pas toucher*/
+
+@font-face {
+    font-family: "Roboto Regular";
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+
+body{
+    font-family: Roboto, Arial, sans-serif;
+}
+section{
+    margin-bottom:100px;
+}
+.container01,.container02,.container03{
+    width:80%;
+    margin: auto;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.container01, article{
+    background-color: #0a66b7;
+    color: white;
+    padding: 10px;
+}
+
+/* Ici mon code à ajouter */
+
+/*1 - Mes articles*/
+
+
+
+
+
+
+
+
+
+
+
+/*2 - Mes liens*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*3 - Mes produits*/
+
