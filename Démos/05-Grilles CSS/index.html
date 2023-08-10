@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Grid Layout</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <h1>Le système de grille CSS :</h1>
+        <p>Également connu sous le nom de CSS Grid Layout, est une technique de mise en page bidimensionnelle qui nous permet de concevoir des layouts complexes et responsives.</p>
+
+        <h2> 1 - Sans grille :</h2>
+        <div class="container border-blue padding-container">
+            <div class="children border-orange">1er enfant</div>
+            <div class="children border-green">2ème enfant </div>
+            <div class="children border-purple">3ème enfant</div>
+        </div>
+
+        <h2> 2 - Les propriétés que l'on utilise sur notre container (notre grille générale)</h2>
+        <!--Container grid-->
+        <h3>a) Container de Grille</h3>
+        <div class="container-grid border-blue padding-container">
+            <div class="children border-orange">1er enfant</div>
+            <div class="children border-green">2ème enfant </div>
+            <div class="children border-purple">3ème enfant</div>
+            <div class="children border-orange">4ème enfant</div>
+            <div class="children border-green">5ème enfant</div>
+        </div>
+        <h3>b) Gestion du nombre de colonnes :</h3>
+        <div class="container-grid-columns border-blue padding-container">
+            <div class="children border-orange">1er enfant</div>
+            <div class="children border-green">2ème enfant </div>
+            <div class="children border-purple">3ème enfant</div>
+        </div>
+        <h3>c) Gestion du nombre de rangées :</h3>
+        <div class="container-grid-rows border-blue padding-container">
+            <div class="children ">1er enfant</div>
+            <div class="children ">2ème enfant </div>
+            <div class="children ">3ème enfant</div>
+        </div>
+        <h3>d) Espacements :</h3>
+        <div class="container-grid-gap border-blue padding-container">
+            <div class="children">1er enfant</div>
+            <div class="children">2ème enfant </div>
+            <div class="children">3ème enfant</div>
+            <div class="children">4ème enfant</div>
+            <div class="children">5ème enfant</div>
+            <div class="children">6ème enfant</div>
+            <div class="children">7ème enfant</div>
+            <div class="children">8ème enfant</div>
+            <div class="children">9ème enfant</div>
+        </div>
+        <h3>e) Nommer les zones de la grille</h3>
+        <p>C'est une manière très visuelle et très intuitive pour nous permettre de créer des layouts complexes, on peut visualiser la structure entière de la grille en un coup d'œil ce qui rend le code plus compréhensible.</p>
+        <div class="container-template-areas padding-container">
+            <header class="header border-orange">Mon header</header>
+            <section class="section01 border-green">Ma première section</section>
+            <aside class="aside border-green">Une sidebar</aside>
+            <footer class="footer border-purple">Mon footer</footer>
+        </div>
+
+        <h2> 3 - Les propriétés que l'on utilise sur les éléments de notre grille (enfants du container de grille)</h2>
+
+        <h3>a) Grid column start et end : </h3>
+        <p>Permet de définir où l'élément commence et se termine horizontalement dans la grille</p>
+        <div class="container-d-grid border-blue padding-container">
+            <div class="grid-column-item01 border-orange">1er enfant</div>
+            <div class="grid-column-item02 border-green">2ème enfant </div>
+            <div class="grid-column-item03 border-purple">3ème enfant</div>
+            <div class="grid-column-item04 border-orange">4ème enfant</div>
+            <div class="grid-column-item border-green">5ème enfant</div>
+            <div class="grid-column-item border-purple">6ème enfant</div>
+            <div class="grid-column-item border-orange">7ème enfant</div>
+            <div class="grid-column-item border-green">8ème enfant</div>
+            <div class="grid-column-item border-purple">9ème enfant</div>
+        </div>
+
+        <h3>b) Grid row start et end :</h3>
+        <p>Permet de définir où l'élément commence et se termine verticalement dans la grille</p>
+        <div class="container-d-grid-02 border-blue padding-container">
+            <div class="grid-row-item01 border-orange">1er enfant</div>
+            <div class="grid-row-item02 border-green">2ème enfant </div>
+            <div class="grid-row-item03 border-purple">3ème enfant</div>
+            <div class="grid-row-item04 border-orange">4ème enfant</div>
+        </div>
+
+        <h3>c) Grid area :</h3>
+        <p>Permet de définir un nom à un élément</p>
+        <div class="container-d-grid-03 border-blue padding-container">
+            <div class="item-01">header</div>
+            <div class="item-02">footer</div>
+        </div>
+
+        <h3>d) Grid row et column :</h3>
+        <p>Il s'agit de raccourci permettant de définir le "start" et le "end" sur la même ligne</p>
+        <div class="container-d-grid-04 border-blue padding-container">
+            <div class="grid-item01 border-orange">1er enfant</div>
+            <div class="grid-item02 border-green">2ème enfant </div>
+            <div class="grid-item03 border-purple">3ème enfant</div>
+        </div>
+
+        <h3>e) align-self et justify-self :</h3>
+        <p>Permet de contrôler l'alignement vertical et horizontal de l'élément dans sa cellule de grille. </p>
+        <div class="container-d-grid-05 border-blue padding-container">
+            <div class="grid-item01 border-orange">1er enfant</div>
+            <div class="grid-item02 border-green">2ème enfant </div>
+            <div class="grid-item03 border-purple">3ème enfant</div>
+        </div>
+
+        <h3>f) Order :</h3>
+        <p>Permet de définir un ordre différent que celui du code html.</p>
+        <div class="container-d-grid-06 border-blue padding-container">
+            <div class="item-order-01">header</div>
+            <div class="item-order-02">footer</div>
+        </div>
+    </body>
+</html>

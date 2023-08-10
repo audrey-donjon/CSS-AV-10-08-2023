@@ -1,0 +1,286 @@
+
+/*Décoration éléments*/
+h2{
+    margin-top: 30px;
+}
+
+.border-orange{
+    border: 4px solid rgb(219, 111, 9);
+}
+
+.border-green{
+    border: 4px
+    solid rgb(6, 92, 3);
+}
+
+.border-purple{
+    border: 4px solid rgb(91, 1, 99);
+}
+
+.border-blue{
+    border: 2px solid blue;
+}
+
+.children{
+    height: 50px;
+    padding: 10px;
+}
+
+.padding-container{
+    padding: 10px;
+}
+
+
+/* 1 - Container grid*/
+
+.container-grid{
+    display: grid; /*ou display inline-grid*/
+    grid-template-columns : 1fr 1fr 1fr; /*ici nous avons 3 colonnes qui font chacune 1/3 de largeur*/
+    grid-template-rows : 1fr 1fr; /*ici nous avons 2 rangées qui font chacune 1/2 de hauteur*/
+    grid-gap: 30px;/*Permet de définir un espace entre les colonnes et les rangées*/
+    grid-template-areas: 'e1 e2 23' 'e4 e5'; /*Nomme les zones de la grille, pour faciliter le positionnement*/
+}
+
+/*Nombre de colonnes*/
+/*grid-template-columns : permet de contrôler la taille, le nombre et la distribution des colonnes*/
+.container-grid-columns{
+    display: grid; /*ou display inline-grid*/
+    grid-template-columns : 1fr 2fr 1fr; /*ici nous avons 3 colonnes qui font chacune 1/3 de largeur*/
+    /* Valeurs possible pour grid-template-columns :
+        1 - Tailles Fixes (permet de définir la largeur de chaque colonne avec une taille fixe): px, em, rem, etc.
+
+        2 - Tailles Relatives (permet de  définir la largeur des colonnes en fonction de l'espace disponible) : %, fr
+
+        3 - Répétition (peut être utilisée pour répéter un motif spécifique) : repeat(nb de répétition, taille de chaque piste)
+
+        4 - Taille minimale et maximale (permet de définir une taille minimale et maximale pour nos colonnes) : minmax(taillemin, taillemax)
+
+        5 - Taille auto (permet de laisser le navigateur décider de la taille des colonnes en fonction du contenu)
+
+    */
+}
+
+/*Nombre de rangées*/
+/*grid-template-rows : permet de contrôler la taille, le nombre et la distribution des rangées*/
+.container-grid-rows{
+    display: grid; /*ou display inline-grid*/
+    grid-template-rows : 100px 100px 100px; /*ici nous avons 3 rangées qui font chacune 1/3 de hauteur*/
+    /* Valeurs possible pour grid-template-rows similaire au colonnes */
+}
+/*
+
+/*Espacements*/
+/*grid-template-rows : permet de contrôler la taille, le nombre et la distribution des rangées*/
+.container-grid-gap {
+    display: grid; /*ou display inline-grid*/
+    grid-template-columns: 1fr 1fr 1fr; /*ici nous avons 3 colonnes qui font chacune 1/3 de largeur*/
+    grid-template-rows: 100px 100px 100px; /*ici nous avons 3 rangées qui font 100px de hauteur*/
+    /* Valeurs possible pour grid-template-rows similaire au colonnes */
+    grid-gap: 30px;
+    /*Nous auront 30px entre chaque colonnes et chaque rangées
+       /*Valeurs possibles pour grip-gap :
+
+           1 - Valeur Fixe : Définissez un espacement fixe en utilisant des unités comme px, em, ou rem.
+               Exemple : grid-gap: 10px; (10 pixels entre les lignes et les colonnes)
+
+           2 - Pourcentage : Utilisez un pourcentage de la taille du conteneur de grille.
+               Exemple : grid-gap: 5%; (5% de l'espace disponible)
+
+           3 - Espacement Vertical et Horizontal Différents : On donne deux valeurs pour avoir un espacement différent entre les rangées et les colonnes.
+               Exemple : grid-gap: 10px 5px; (10 pixels entre les rangées et 5 pixels entre les colonnes)
+           4 - Utilisation de row-gap et column-gap pour découper spécifiquement l'espacement entre chaque rangées et chaque colonnes
+               Exemple : row-gap: 10px; (Espacement entre les rangées)
+                         column-gap: 5px; (Espacement entre les colonnes)
+           Grid-gap est donc un raccourci de row-gap et column-gap
+       */
+}
+/*Nommer les zones de la grille*/
+/*grid-template-area*/
+.container-template-areas{
+    display: grid;
+    /*1étape : on définit les zones*/
+    grid-template-areas: /*On définis nos zones en utilisant des noms, chaque nom représente une zone dans la grille, on utilise le guillemets pour définir chaque rangé*/
+    "header header header" /*zone header composé de 3 colonnes*/
+    "aside section section" /*zone aside composé de 1 colonne et  zone section composé de 2 colonnes*/
+    "footer footer footer"; /*zone footer composé de 3 colonnes*/
+    /*Les ,oms sont répétés pour étendre une zone sur plusieurs colonnes*/
+}
+
+/*2ème étape : on place les éléments dans les zones respectives*/
+.header{ /*on sélectionne l'élément avec la class header puis on lui applique le nom header*/
+    grid-area : header;
+}
+.section01{/*on sélectionne l'élément section avec la class section01 puis on lui applique le nom section*/
+    grid-area : section;
+}
+.aside{/*on sélectionne l'élément aside avec la class aside puis on lui applique le nom aside*/
+    grid-area : aside;
+}
+.footer{/*on sélectionne l'élément footer avec la class footer puis on lui applique le nom footer*/
+    grid-area : footer;
+}
+
+/* Valeurs possibles : none, le point '.' et un nom
+none : si on ne veut pas définir de zone,
+. : si on veut représenter une cellule vide dans la grille,
+noms : tout autre noms que none.
+*/
+
+/*2 - Enfants de ma grille*/
+
+/* grid-column-start - grid-column-end */
+.container-d-grid{
+display: grid; /*ou display inline-grid*/
+grid-template-columns: 1fr 1fr 1fr; /*ici nous avons 3 colonnes qui font chacune 1/3 de largeur*/
+grid-template-rows: 1fr 1fr 1fr; /*ici nous avons 3 rangées qui font 100px de hauteur*/
+}
+
+.grid-column-item01{
+    /*Ici mon premier enfant ira de la première ligne vertical à la 3ème ligne vertical de mes 3 colonnes*/
+    grid-column-start:1;
+    grid-column-end:3;
+}
+.grid-column-item02{
+    /*Ici mon deuxième enfant ira de la 3ème ligne vertical à la 4ème ligne vertical de mes 3 colonnes*/
+    grid-column-start:3;
+    grid-column-end:4;
+}
+.grid-column-item03{
+    /*Ici mon troisième enfant ira de la 1ème ligne vertical à la 2ème ligne vertical de mes 3 colonnes*/
+    grid-column-start:1;
+    grid-column-end:2;
+}
+.grid-column-item04{
+    /*Ici mon quatrième enfant ira de la 2ème ligne vertical à la 4ème ligne vertical de mes 3 colonnes*/
+    grid-column-start:2;
+    grid-column-end:4;
+}
+/*Mes autres enfants continueront à ne faire qu'1/3 d'un total de 3 colonnes par rangé*/
+
+/* grid-row-start - grid-row-end */
+
+.container-d-grid-02{
+    display: grid; /*ou display inline-grid*/
+    grid-template-columns: 1fr; /*ici nous avons 1 colonne*/
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; /*ici nous avons 6 rangées qui font 1/6eme chacune*/
+}
+
+.grid-row-item01{
+    /*Ici mon premier enfant ira de la première ligne horizontale à la 3ème ligne horizontale de mes 6 rangées*/
+    grid-row-start:1;
+    grid-row-end:3;
+}
+.grid-row-item02{
+    /*Ici mon deuxième enfant ira de la 3eme ligne horizontale à la 4ème ligne horizontale de mes 6 rangées*/
+    grid-row-start:3;
+    grid-row-end:4;
+}
+.grid-row-item03{
+    /*Ici mon troisième enfant ira de la 4eme ligne horizontale à la 5ème ligne horizontale de mes 6 rangées*/
+    grid-row-start:4;
+    grid-row-end:5;
+}
+.grid-row-item04{
+    /*Ici mon quatrième enfant ira de la 5eme ligne horizontale à la 7ème ligne horizontale de mes 6 rangées*/
+    grid-row-start:5;
+    grid-row-end:7;
+}
+/* grid-area */
+.container-d-grid-03{
+    display: grid;
+    grid-template-areas :
+    "h"
+    "f"
+    ;
+}
+.item-01{
+    grid-area: h;
+    border : 1px dashed deepskyblue;
+}
+.item-02{
+    grid-area: f;
+    border : 1px dashed deepskyblue;
+}
+
+/* grid-column - grid-row */
+
+.container-d-grid-04, .container-d-grid-05{
+    display: grid; /*ou display inline-grid*/
+    grid-template-columns: 1fr 1fr 1fr 1fr; /*ici nous avons 1 colonne*/
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; /*ici nous avons 6 rangées qui font 1/6eme chacune*/
+}
+
+.grid-item01{
+    /* Mon premier enfant prendra 2 rangées et 1 colonne*/
+    grid-row: 1/3;
+    grid-column:1/2;
+}
+.grid-item02{
+    /* Mon deuxième enfant prendra 1 rangée et 2 colonnes*/
+    grid-row: 3/4;
+    grid-column:2/4;
+}
+.grid-item03{
+    /*Mon troisième enfant prendra 3 rangées et 1 colonne*/
+    grid-row: 4 / span 3; /*l'utilisation de span signifie que mon élément prendra 3 rangées en partant de la 4ème ligne horizontale*/
+    grid-column:4/5;
+}
+
+
+/*align-self et justify-self*/
+
+.container-d-grid-05>.grid-item01{
+    /*Ici mon premier enfant sera centré verticalement*/
+    align-self: center;
+}
+
+.container-d-grid-05>.grid-item02{
+    /*Ici mon deuxième enfant sera centré horizontalement*/
+    justify-self: center;
+}
+
+.container-d-grid-05>.grid-item03{
+    /*Ici mon troisième enfant sera centré horizontalement et verticalement*/
+    justify-self: center;
+    align-self: center;
+}
+
+/*order*/
+.container-d-grid-06{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.item-order-01{
+    order:2; /*Ici mon header se retrouvera en 2ème position*/
+}
+.item-order-02{
+    order:1; /*Ici mon footer se retrouvera en 1ère position*/
+}
+/*L'ordre initial des éléments est 0 par défaut. Donc, si on ne définit pas la propriété order pour un élément, sa valeur sera de 0.*/
+
+/*
+
+
+
+
+
+
+
+
+
+Outil flex pour simuler les propriétés css des flexbox :
+- https://codepen.io/enxaneta/full/adLPwv/
+
+
+
+Exercices: ludique sur les Flex :
+
+Les grenouilles :
+https://flexboxfroggy.com/#fr
+
+Le Tower defense :
+http://www.flexboxdefense.com/
+
+*/
