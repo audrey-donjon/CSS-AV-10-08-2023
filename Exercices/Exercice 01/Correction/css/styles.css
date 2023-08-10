@@ -1,0 +1,93 @@
+/*Décors et fonts à ne pas toucher*/
+
+@font-face {
+    font-family: "Roboto Regular";
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+
+body{
+    font-family: Roboto, Arial, sans-serif;
+}
+section{
+    margin-bottom:100px;
+}
+.container01,.container02,.container03{
+    width:80%;
+    margin: auto;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.container01, article{
+    background-color: #0a66b7;
+    color: white;
+    padding: 10px;
+}
+
+/* Ici mon code à ajouter */
+
+/*1 - Mes articles*/
+
+.container01{
+    text-align: center;
+}
+
+.container01 article{
+    width: 200px;
+    display: inline-block;
+    text-align: left;
+    box-sizing: border-box;
+
+}
+
+
+/*2 - Mes liens*/
+
+.container02 a{
+    display: block;
+    width: 100px;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #0a1829;
+    color: #0a84ff;
+    text-align: center;
+    border: 1px solid #0a84ff;
+    box-sizing: border-box;
+    margin:5px;
+}
+
+
+/*3 - Mes produits*/
+
+.container03>.cart{
+    width: 250px;
+    background-color:#0B1A23;
+    color:#0aa9e8;
+    display: inline-block;
+    margin: 10px;
+    border: 2px solid #0a66b7;
+    box-sizing: border-box;
+    box-shadow: 0 0 11px -3px #0a1829;
+}
+
+.container03>.cart>img {
+    width:100%;
+    max-height: 300px;
+
+}
+
+.container03>.cart>div{
+    padding: 10px;
+}
+
+.container03>.cart>div>h3 {
+   text-align: center;
+}
+
+.container03>.cart>button{
+    display: block;
+    background-color: #0a66b7;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #0a1829;
+    cursor:pointer;
+}

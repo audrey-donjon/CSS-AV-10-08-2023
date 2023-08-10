@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Flexbox</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <h1>Les flexbox : modèle de boîte flexible</h1>
+        <p>Flexbox est un modèle de boîte flexible permettant de gérer le positionnement des éléments dans un conteneur d'une manière plus fluide qu'avec les modèles de boîte classique.</p>
+
+        <h2>Sans flexbox :</h2>
+        <div class="container-1 border-blue padding-container">
+            <div class="children border-orange">1er enfant</div>
+            <div class="children border-green">2ème enfant </div>
+            <div class="children border-purple">3ème enfant</div>
+        </div>
+        <!--Elements enfants flexible en ligne-->
+        <h2>Avec flexbox : en ligne</h2>
+        <div class="container-2 border-blue padding-container">
+            <div class="children border-orange">1er enfant</div>
+            <div class="children border-green">2ème enfant </div>
+            <div class="children border-purple">3ème enfant</div>
+        </div>
+        <h3>Gestion du passage à la ligne avec flex-wrap :</h3>
+        <div class="container-2-wrap border-blue padding-container">
+            <div class="children border-orange">1er enfant</div>
+            <div class="children border-green">2ème enfant </div>
+            <div class="children border-purple">3ème enfant</div>
+        </div>
+        <h3>Alignement sur axe principal(horizontal) avec justify-content :</h3>
+        <div class="container-2-justify-content border-blue padding-container">
+            <div class="children border-orange">1er enfant</div>
+            <div class="children border-green">2ème enfant </div>
+            <div class="children border-purple">3ème enfant</div>
+        </div>
+        <h3>Alignement sur axe secondaire(vertical) avec align-item :</h3>
+        <div class="container-2-align-item border-blue padding-container">
+            <div class="children border-orange">1er enfant</div>
+            <div class="children border-green">2ème enfant </div>
+            <div class="children border-purple">3ème enfant</div>
+        </div>
+        <!--Elements enfants flexible en colonne-->
+        <h2>Avec flexbox : en colonne</h2>
+        <div class="container-3 border-blue padding-container">
+            <div class="children border-orange">1er enfant</div>
+            <div class="children border-green">2ème enfant </div>
+            <div class="children border-purple">3ème enfant</div>
+        </div>
+        <h3>Alignement sur axe principal(vertical) avec justify-content :</h3>
+        <div class="container-3-align-item border-blue padding-container">
+            <div class="children border-orange">1er enfant</div>
+            <div class="children border-green">2ème enfant </div>
+            <div class="children border-purple">3ème enfant</div>
+        </div>
+        <h3>Alignement sur axe secondaire(horizontal) avec align-item :</h3>
+        <div class="container-3-justify-content border-blue padding-container">
+            <div class="children border-orange">1er enfant</div>
+            <div class="children border-green">2ème enfant </div>
+            <div class="children border-purple">3ème enfant</div>
+        </div>
+        <h3>Ordre définit pour les enfants avec order :</h3>
+        <div class="border-blue padding-container">
+            <div id="box-1" class="children border-orange">1er enfant</div>
+            <div id="box-2" class="children border-green">2ème enfant </div>
+            <div id="box-3" class="children border-purple">3ème enfant</div>
+        </div>
+    </body>
+</html>

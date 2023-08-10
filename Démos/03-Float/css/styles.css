@@ -1,0 +1,32 @@
+body{
+    font-size:2em;
+    width: 80%;
+    margin:auto;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+h1{
+    text-align: center;
+}
+
+img{
+    margin: 30px;
+    width:400px;
+}
+
+.img-front{
+    float:right;
+}
+.img-back{
+    float:left;
+
+}
+
+section{
+    padding:50px;
+    margin:20px;
+    border:2px solid grey;
+}

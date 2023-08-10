@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Positionnement et dimensionnement</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Exercice sur le positionnement et le dimensionnement</h1>
+            <p>Vous devrez ajouter le code nécessaire pour réaliser ce qui sera demandé selon les différents cas.</p>
+        </header>
+        <section>
+            <h2>1 - Alignement et dimensionnement d'éléments block :</h2>
+            <p>Ici, je voudrais que mes articles soient positionné les uns à côté des autres et face une largeur de 200px chacun, qu'ils soient centré et que chacun des articles est le texte aligné à gauche.</p>
+            <div class="container01">
+                <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum debitis dicta, est exercitationem hic illo inventore, ipsum laudantium minus porro quaerat reprehenderit similique, tempore ut voluptas. Amet distinctio incidunt rem.</article><article>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum debitis dicta, est exercitationem hic illo inventore, ipsum laudantium minus porro quaerat reprehenderit similique, tempore ut voluptas. Amet distinctio incidunt rem.</article><article>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum debitis dicta, est exercitationem hic illo inventore, ipsum laudantium minus porro quaerat reprehenderit similique, tempore ut voluptas. Amet distinctio incidunt rem.</article>
+            </div>
+        </section>
+        <section>
+            <h2>2 - Alignement et dimensionnement d'éléments inline :</h2>
+            <p>Ici, je voudrais que mes liens soient positionné les uns en dessous des autres et :</p>
+            <ul>
+                <li>une largeur total de 100px chacun</li>
+                <li>une marge intérieure de 10px et une marge extérieur de 5px</li>
+                <li>une bordure de 1px d'épaisseur / solide et de couleur #0a84ff</li>
+                <li>un fond de couleur #0a1829 et une couleur #0a84ff</li>
+                <li>pas de soulignement par défaut</li>
+            </ul>
+            <div class="container02">
+                <a href="#">Lien 01</a><a href="#">Lien 02</a><a href="#">Lien 03</a><a href="#">Lien 04</a><a href="#">Lien 05</a>
+            </div>
+        </section>
+        <section>
+            <h2>3 - Alignement et dimensionnement d'éléments :</h2>
+            <p>Ici, concernant mes cart, il faudra :</p>
+            <ul>
+                <li>une largeur de 250px au total</li>
+                <li>un fond de couleur #0B1A23 et une couleur de #0aa9e8</li>
+                <li>une marge extérieure de 10px</li>
+                <li>une bordure de 2px d'épaisseur, de couleur #0a66b7 et solide</li>
+                <li>une ombre</li>
+                <li>que les cart soient les unes à côté des autres</li>
+            </ul>
+            <p>Pour mes images, il faudra :</p>
+            <ul>
+                <li>une largeur de 100%</li>
+                <li>une hauteur maximum de 300px</li>
+                <li>bonus à faire en dernier : ajouter dans le squelette de mon fichier html un srcset pour la dernière image, pour avoir une version qui sera en normal ou plus adapter au écran retina selon l'écran</li>
+            </ul>
+            <p>Pour la div qui contient le titre et le texte, il faudra une marge intérieure de 10px.</p>
+            <p>Pour les titres dans les cart, il faudra qu'ils soient centré.</p>
+            <p>Pour mes boutons, il faudra :</p>
+            <ul>
+                <li>un fond de couleur #0a66b7</li>
+                <li>une marge intérieure de 10px</li>
+                <li>une marge extérieure de 10px en haut et en bas et automatique à droite et à gauche</li>
+                <li>une bordure de 1px d'épaisseur, de couleur #0a1829 et solide</li>
+            </ul>
+            <div class="container03">
+                <div class="cart">
+                    <img src="img/baguette.jpg" alt="une baguette de pain">
+                    <div>
+                        <h3>Description du produit</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, vitae!</p>
+                    </div>
+                    <button>Voir le produit en détail</button>
+                </div><div class="cart">
+                    <img src="img/croissant.jpg" alt="un croissant">
+                    <div>
+                        <h3>Description du produit</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, vitae!</p>
+                    </div>
+                    <button>Voir le produit en détail</button>
+                </div><div class="cart">
+                    <img src="img/low-res.png"
+                         srcset="img/high-res.png 2x"
+                         alt="un chat">
+                    <div>
+                        <h3>Description du produit</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, vitae!</p>
+                    </div>
+                    <button>Voir le produit en détail</button>
+                </div>
+            </div>
+        </section>
+
+    </body>
+</html>

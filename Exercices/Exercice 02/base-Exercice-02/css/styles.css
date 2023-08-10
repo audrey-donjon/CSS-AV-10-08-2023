@@ -1,0 +1,33 @@
+/*Décors et fonts à ne pas toucher*/
+
+@font-face {
+    font-family: "Roboto Regular";
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+
+/* Reset CSS */
+body, h1, article, div {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+/* En-tête */
+
+
+.banner{
+    background: url("../img/high-res.png") no-repeat center;
+    background-size:cover;
+    height:300px;
+}
+
+/* Section principale avec Flexbox */
+
+
+
+
+
+
+/* Pied de page avec CSS Grid */
+
+

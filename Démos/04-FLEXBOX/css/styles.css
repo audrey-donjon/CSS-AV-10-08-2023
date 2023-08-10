@@ -1,0 +1,157 @@
+h2{
+    margin-top: 100px;
+}
+
+.border-orange{
+    border: 4px solid rgb(219, 111, 9);
+}
+
+.border-green{
+    border: 4px
+    solid rgb(6, 92, 3);
+}
+
+.border-purple{
+    border: 4px solid rgb(91, 1, 99);
+}
+
+.border-blue{
+    border: 2px solid blue;
+}
+
+.children{
+    height: 50px;
+    padding: 10px;
+}
+
+.padding-container{
+    padding: 10px;
+}
+
+/*Direction pour positionner les enfants*/
+/*Il y a 4 directions possibles pour distribuer les enfants d'un élément flex :
+
+    row : horizontale, c'est la valeur par défaut
+    column : verticale
+    row-reverse horizontale inversé
+    column-reverse verticale inversé
+*/
+.container-2{
+    display: flex;
+    /* flex-direction: row-reverse; horizontale inversé*/
+    /* Tous les éléments enfants seront disposés en ligne côte à côte */
+}
+
+.container-3{
+    display: flex;
+    flex-direction: column;
+    /* flex-direction: column-reverse; verticale inversé*/
+
+}
+
+
+/*Passage à la ligne*/
+/*Il y a 3 paramètres possibles pour gérer le manque de place :
+
+    nowrap : les éléments ne passent pas à la ligne, c'est la valeur par défaut
+    wrap : les éléments passent à la ligne dans le sens de lecture
+    wrap-reverse : les éléments passent à la ligne dans le sens inverse
+*/
+.container-2-wrap{
+    width: 200px ;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+/*ALIGNEMENT*/
+
+/*Les valeurs possibles pour les alignements sont les suivantes :
+
+    flex-start : éléments positionnés au début de l'axe, c'est la valeur par défaut
+    flex-end : éléments positionnés à la fin de l'axe
+    center : éléments centrés au milieu de l'axe
+    space-between : les éléments sont espacés à égale distance sur tout l'axe (et sont collés aux "bords" de l'axe)
+    space-around : les éléments sont espacés à égale distance sur tout l'axe (et ne sont pas collés aux "bords" de l'axe)
+
+
+    Il est possible de gérer l'alignement sur l'axe principal avec la propriété "justify-content" et sur l'axe secondaire avec la propriété "align-items" :
+
+    L'axe principal et secondaire varies en fonction du paramétrage de la direction de votre flexbox
+*/
+
+/*
+Si "flex-direction" vaux "row" ou "row-reverse", alors l'axe principal sera l'axe horizontal et l'axe secondaire sera l'axe vertical
+*/
+.container-2-justify-content {
+    display: flex;
+    justify-content: center;
+
+}
+
+.container-2-align-item{
+    height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+/*
+Si "flex-direction" vaux "column" ou "column-reverse", alors l'axe principal sera l'axe vertical et l'axe secondaire sera l'axe horizontal
+*/
+.container-3-justify-content{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-3-align-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*ORDER*/
+/*
+
+<!--Propriétés sur les div(les colonnes) en elles même-->
+
+order: définit l'ordre des éléments, plus le chiffre est non définit ou petit plus il sera mis en premiers
+flex-grow: définit le nombre de fois qu'est étiré un élément par rapport aux autres
+flex-shrink: définit le nombre de fois qu'est réduit un élément par rapport aux autres
+
+*/
+#box-1{
+    order: 3;
+    flex-grow: 2; /*etire l'élément dans l'espace restant, ici il sera 2 fois plus gros que les autres colonnes*/
+}
+
+#box-2{
+    order: 2;
+    flex-grow: 1;
+}
+
+#box-3{
+    order:1; /*définit l'ordre de ses colonnes*/
+    flex-grow: 1;
+}
+
+
+/*
+
+Outil flex pour simuler les propriétés css des flexbox :
+- https://codepen.io/enxaneta/full/adLPwv/
+
+
+
+Exercices: ludique sur les Flex :
+
+Les grenouilles :
+https://flexboxfroggy.com/#fr
+
+Le Tower defense :
+http://www.flexboxdefense.com/
+
+*/
