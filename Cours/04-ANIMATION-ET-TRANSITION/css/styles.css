@@ -1,0 +1,68 @@
+.transition{
+    color: rgb(83, 83, 174);
+    border: 1px solid rgb(83, 83, 174);
+    display: block;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition: all 1s cubic-bezier(.13,.51,.36,.94);
+}
+
+.transition:hover{
+    color: rgb(157, 98, 21);
+    border: 1px solid rgb(157, 98, 21);
+}
+
+
+.container-animation{
+    padding-bottom: 150px;
+    border: solid black 2px;
+}
+
+.animation{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    position: relative;
+
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    /* animation: example 4s linear 1s normal; */
+}
+
+@keyframes example{
+    0%{
+        background-color: rgb(29, 6, 51);
+        left:0;
+        top:0;
+    }
+    25%{
+        background-color: rgb(71, 6, 57);
+        left:100px;
+        top:0;
+    }
+    50%{
+        background-color: rgb(205, 52, 172);
+        left:100px;
+        top:100px;
+    }
+    75%{
+        background-color: rgb(157, 95, 33);
+        left:0px;
+        top:100px;
+    }
+    100%{
+        background-color: rgb(157, 95, 33);
+        left:0;
+        top:0;
+    }
+}
+
+/* @keyframes example{
+    from{ left:0; }
+    to{ left:100px }
+} */
