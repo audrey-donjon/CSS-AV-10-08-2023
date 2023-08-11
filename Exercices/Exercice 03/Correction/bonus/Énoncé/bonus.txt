@@ -1,0 +1,9 @@
+
+
+1 - Ajouter une media query qui affichera une image haute definition (aller en chercher une libre de droit sur pexel par exemple) pour la bannière. 
+
+
+2 - Ajouter une partie avec un formulaire selon les screens fournis :
+
+Si vous ne vous souvenez plus comment coder un formulaire html, vous pouvez lire ce cours : https://codexweb.fr/html-css/30%20-%20Les%20formulaires.html
+

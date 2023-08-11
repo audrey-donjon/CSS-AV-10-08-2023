@@ -1,0 +1,195 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+
+/* Reset CSS + font */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+/*Styles globaux de ma page*/
+
+h1, h2{
+    color: #323232;
+}
+h2{
+    font-size:1.75rem;
+}
+h3{
+    color:#004d5a;
+    font-size:1.5rem;
+}
+section, footer{
+    padding: 20px;
+}
+
+/*Header de ma page*/
+header>h1{
+    padding-left: 30px;
+}
+
+/*Menu de navigation principal*/
+.nav_main{
+    background-color:rgb(31, 31, 31);
+    padding: 0;
+}
+.nav_main>ul{ /*Pour pouvoir aligner ma liste de liens je vais devoir rendre son parent (ul) flexible (donc de type display:flex)*/
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;/*pour mettre mes liens en colonne*/
+    list-style: none;/*pour enlever les puces de mes listes*/
+    text-align: center;
+}
+.nav_main>ul>li>a{
+    padding: 1.5rem;
+    display: block;/*pour pouvoir mettre mon padding*/
+    color:white;
+    text-decoration: none;/*pour enlever le soulignement*/
+}
+.nav_main>ul>li>a:hover{/*utilisation de la pseudo-classe :hover pour changer de style au survol de la souris*/
+    color: #004d5a;
+    background-color: white;
+}
+
+/*Section de présentation*/
+.section_presentation{
+    background-color: #9c9c9c;
+}
+
+/*Bannière*/
+.banner{
+    width: 100%;
+    height: 300px;
+    background-image: url("../images/banner.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    display: none;
+}
+
+/*Section des actualités*/
+.article{
+    padding: 0 10px;
+    text-align: left;
+}
+.article>p{
+    color:#656565;
+}
+
+/*Pied de page*/
+.footer_main{
+    background-color: rgb(31, 31, 31);
+}
+.footer_main nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+.footer_main nav ul li a{
+    text-decoration: none;
+    color:white;
+}
+
+/*nav réseaux sociaux footer*/
+.footer_socials_links ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.footer_socials_links>ul>li{
+    font-size:1.6rem;
+    padding: 10px;
+}
+.fa-facebook, .fa-twitter, .fa-pinterest, .fa-snapchat{
+    font-size: 2rem;
+}
+.fa-facebook{
+    color: #3b5998;
+}
+.fa-twitter{
+    color: #00aced;
+}
+.fa-pinterest{
+    color: #bd081c;
+}
+.fa-snapchat{
+    color: #fffc01;
+}
+
+/*nav liens footer*/
+
+.footer_links ul li{
+    margin: 15px;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media screen and (min-width:768px){ /*pour format tablette*/
+    /*Menu de navigation principal*/
+    .nav_main>ul{
+        display: flex;
+        flex-direction: row;
+    }
+    .nav_main>ul>li>a{
+        padding: 1rem;
+    }
+
+    /*Section news*/
+    .section_news .articles{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .section_news .articles .article{
+        width: 40%;
+        box-sizing: border-box;
+    }
+
+    /*Pied de page*/
+    .footer_links>ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width:1224px){/*pour format ordinateur*/
+    /*Bannière*/
+    div.banner{
+        display: block;
+    }
+
+    /*Section news*/
+    .section_news .articles{
+        flex-wrap: nowrap;
+        align-items:stretch;
+    }
+    .section_news .articles .article{
+        width: 100%;
+    }
+
+    /*Changements au survol de la souris*/
+
+    .fa-facebook:hover, .fa-twitter:hover, .fa-pinterest:hover, .fa-snapchat:hover{
+        text-shadow: 0 0 3px rgb(197, 197, 197);
+    }
+
+    .footer_links ul li a:hover{
+        color: #01849b;
+    }
+}
+
+
+/*Bonus image de bannière haute résolution*/
+
+@media (min-resolution: 2dppx){
+    .banner{
+        background-image: url("../images/banner-reso-high.jpg");
+    }
+}
