@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="Animation et transition css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Animation et transition css</title>
+    </head>
+    <body>
+        <!--  ANIMATIONS  -->
+        <nav class="menu">
+            <div class="menu-item">
+                <a href="#">Accueil</a>
+                <div class="sub-menu">
+                    <a href="#">Sous-menu 1</a>
+                    <a href="#">Sous-menu 2</a>
+                </div>
+            </div>
+            <div class="menu-item">
+                <a href="#">À propos</a>
+                <div class="sub-menu02">
+                    <a href="#">Sous-menu 1</a>
+                    <a href="#">Sous-menu 2</a>
+                </div>
+            </div>
+            <div class="menu-item">
+                <a href="#">Contact</a>
+                <div class="sub-menu03">
+                    <a href="#">Sous-menu 1</a>
+                    <a href="#">Sous-menu 2</a>
+                </div>
+            </div>
+        </nav>
+        <!--  TRANSISIONS  -->
+        <h1>Exercice : Animations de sous-menu et animation de bouton</h1>
+        <p>Énoncé :
+            En premier lieu, vous devrez poursuivre le CSS pour faire les animations suivantes sur les sous-menues de nos 3 liens, accueil, à propos et contact :<br></p>
+        <ul>
+            <li>1ʳᵉ animation sur le sous menu de Accueil qui devra en 2 étapes en 0.5s faire une translation de haut en bas.</li>
+            <li>2ᵉ animation sur le sous menu de À propos qui devra en 2 étapes changer de transparence, d'abord transparent puis opaque en 0.5s </li>
+            <li>3ᵉ animation sur le sous menu de Contact qui devra en 2 étapes effectuer une translation de la droite vers la gauche</li>
+        </ul>
+        <hr>
+        <p>Énoncé : Ensuite, vous devrez poursuivre le CSS pour faire les transitions au survol sur les boutons :</p>
+        <ul>
+            <li>1er bouton : il faut changer de couleur de fond sur 0.5s</li>
+            <li>2ᵉ bouton : il faut faire tourner le bouton à 360 degrés sur 1s</li>
+            <li>3ᵉ bouton : il faut effectuer une mise à l'échelle de 1.5 sur 0.5s</li>
+            <li>4ᵉ bouton : il faut effectuer à la fois un changement de couleur, une rotation à 180 degrés et une mise à l'échelle de 1.2 sur 0.5s</li>
+        </ul>
+        <div class="transition-boxes">
+            <div class="box-button">
+                <p>Transition de couleur de fond :</p>
+                <button class="button myButton01">Cliquez-moi</button>
+            </div>
+            <div class="box-button">
+                <p>Transition de rotation :</p>
+                <button class="button myButton02">Cliquez-moi</button>
+            </div>
+            <div class="box-button">
+                <p>Transition d'échelle :</p>
+                <button class="button myButton03">Cliquez-moi</button>
+            </div>
+            <div class="box-button">
+                <p>Transition multiple (couleur de fond, rotation et zoom) :</p>
+                <button class="button myButton04">Cliquez-moi</button>
+            </div>
+        </div>
+    </body>
+</html>

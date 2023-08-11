@@ -1,0 +1,99 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+
+/* Reset CSS */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Arial, sans-serif;
+}
+/*Propriétés globales*/
+h1{
+    text-align : center;
+}
+
+/*Animations*/
+
+/*Menu*/
+.menu { /*mon menu est flexible et positionne mes liens avec de l'espacement*/
+    display: flex;
+    justify-content: space-around;
+    background-color:#0a1829;
+}
+.menu-item { /*mon menu qui contiendra un sous menu est en relatif pour pouvoir positionner mes liens de sous menu plus tard*/
+    position: relative;
+
+}
+.menu a{ /*apparence de tous mes liens*/
+    text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+    display: block;
+}
+
+.menu>.menu-item>div>a{ /*Mise en place d'une largeur minimum pour mes liens de sous menu*/
+    min-width:200px;
+}
+
+.sub-menu, .sub-menu02, .sub-menu03 { /*Lien de sous menu caché, et positionné en absolute par rapport à son parent relatif le menu*/
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+/*Animation 01*/
+
+
+
+/*Animation 02*/
+
+
+
+/*Animation 03*/
+
+
+
+
+/*TRANSITIONS*/
+
+/*Agencement de mon conteneur à boutons*/
+.transition-boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/*Apparence et agencement de mon conteneur de bouton*/
+.box-button{
+    margin-top: 50px;
+    border: solid 1px black;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    text-align:center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Apparence de mes boutons*/
+.button{
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/*Transition de mon 1er bouton*/
+
+
+/*Transition de mon 2ème bouton*/
+
+
+/*Transition de mon 3ème bouton*/
+
+
+/*Transition de mon 4ème bouton*/
