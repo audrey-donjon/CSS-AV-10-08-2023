@@ -1,0 +1,68 @@
+
+nav{
+    display: flex;
+    flex-direction: column;
+}
+/*règles impression*/
+@media print, (monochrome){ /* , = ou */
+    nav{
+        display: none;
+    }
+}
+
+@media (min-width: 800px)and (orientation: landscape){ /*min-height, max-width et max-height*/
+    section{
+        padding: 50px;
+        text-align: center;
+    }
+    nav{
+        flex-direction: row;
+    }
+}
+/*règles largeur hauteur*/
+@media (min-width: 1800px){ /*min-height, max-width et max-height*/
+    section{
+        padding: 200px;
+        text-align: center;
+    }
+}
+/*règles oriantation portrait ou paysage*/
+@media (orientation: portrait){
+    p{
+        color: rgb(29, 74, 90);
+    }
+}
+
+@media (orientation: landscape){
+    p{
+        color: rgb(25, 26, 26);
+    }
+}
+
+@media (min-resolution:2dppx){
+    body{
+        background-image: url("../img/high-res.png");
+    }
+}
+
+@media (aspect-ratio: 16/9){
+    body{
+        background-color:rgb(22, 22, 22);
+    }
+}
+/*cas particuliers*/
+@media (color: 8){
+    /*styles*/
+}
+
+@media not all and (monochrome){
+    /*styles*/
+}
+
+@media (pointer: coarse){
+    /*styles*/
+}
+
+@media (pointer: fine){
+    /*styles*/
+}
